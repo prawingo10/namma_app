@@ -19,4 +19,7 @@ get 'home', to: 'students#home'
 #put 'inform', to: 'students#inform'
 post 'inform', to: "students#inform"
 get 'view', to: 'students#view'
+
+
+root 'application#kika'
 end
