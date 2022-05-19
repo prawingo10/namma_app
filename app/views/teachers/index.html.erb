@@ -1,0 +1,34 @@
+
+<h1>Teacher List</h1>
+
+<table>
+<thead>
+<tr><th>Name :</th>
+<th>Subject :</th>
+</tr>
+
+
+<tbody>
+<% @teachers.each do |teach| %>
+<tr>
+<td><%= teach.name%></td>
+<td><%= teach.subject%></td>
+
+</tr>
+</tbody><% end %>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

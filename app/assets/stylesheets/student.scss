@@ -1,0 +1,47 @@
+// Place all the styles related to the Student controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body{
+    background-color: #404040;
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #a0b6f7;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f261;
+  }
+  .primary:link{
+  
+color: aqua;
+
+  }
+
+
+  .primary:visited{
+    
+    color: rgb(247, 247, 247);
+    
+      }
+
+      .primary:hover{
+      
+        color: rgb(10, 11, 15);
+        
+          }
+
+          .primary:active{
+            
+            color: rgb(241, 102, 67);
+            
+              }

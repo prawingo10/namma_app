@@ -1,0 +1,29 @@
+<h1>This is Editing Page Of Student List</h1>
+
+<% if @students.errors.any?%>
+<li>
+<% @students.errors.full_messages.each do |msg|%>
+ <ol><%= msg %></ol>
+
+  <% end %>
+  <% end %>
+  </li>
+<%= form_with(model: @students, local: true) do |f| %>
+
+  <%= f.label :Name %><br/>
+  <%= f.text_field :name %><br/><br/>
+
+  <%= f.label :Subject %><br/>
+  <%= f.text_field :subject %><br/><br/>
+
+
+  <%= f.label :Age %><br/>
+  <%= f.number_field :age %><br/><br/>
+
+  <%= f.submit "update" %>
+
+
+  <td><%=link_to 'New Form', new_student_path%></td>
+  <td><%=link_to 'Show Page', student_path%></td>
+
+<%end%>

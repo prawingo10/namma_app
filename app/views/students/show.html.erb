@@ -1,0 +1,8 @@
+<h1>This is student details page</h1>
+<p><strong>Name:</strong><%=@stud.name%></p>
+<p><strong>Subject:</strong><%=@stud.subject%></p>
+<p><strong>Age:</strong><%=@stud.age%></p>
+
+<td><%=link_to 'Edit',edit_student_path%></td>
+<td><%=link_to 'New Form', new_student_path%></td>
+<td><%=link_to 'Delete', student_path(@stud), method: :delete%></td>

@@ -1,0 +1,28 @@
+<h1>listing of student in the school</h1>
+
+<% if @students.errors.any?%>
+<li>
+<% @students.errors.full_messages.each do |msg|%>
+ <ol><%= msg %></ol>
+
+  <% end %>
+  <% end %>
+  </li>
+<%= form_with scope: :student, url: students_path, local: true do |f| %>
+
+  <%= f.label :Name %><br/>
+  <%= f.text_field :name %><br/><br/>
+
+  <%= f.label :Subject %><br/>
+  <%= f.text_field :subject %><br/><br/>
+
+
+  <%= f.label :Age %><br/>
+  <%= f.number_field :age %><br/><br/>
+
+
+  <%= f.submit "Sign Up" %>
+
+  <td><%=link_to 'Go To Teacher Form Page', new_teacher_path%></td>
+
+<%end%>
