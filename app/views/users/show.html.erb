@@ -1,0 +1,7 @@
+<h1>this is show page</h1>
+<p><strong>UserName:</strong><%= @user.username %></p>
+<p><strong>EMail:</strong><%= @user.email %></p>
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Back', users_path(@user) %>
+

@@ -1,0 +1,17 @@
+
+<%@articles.errors.any?%>
+<%if @articles.errors.full_messages.each do |msg| %>
+<li><ol><%= msg %></ol></li>
+<% end %>
+<% end %>
+<%= form_with scope: :article, url:articles_path, local: true do |f| %>
+
+<%= f.label :Name %>
+<%= f.text_field :name%><br>
+
+<%= f.label :Description %>
+<%= f.text_field :description%><br>
+
+<%= f.submit %>
+
+<% end %>

@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
 #get 'new', to: 'teachers#new'
-
-resources :teachers, only: [:new, :create, :show, :index, :edit, :destroy, :update]
-
 get 'about', to: 'teachers#about';
 get 'hello', to: 'application#hello'
 
@@ -20,6 +17,14 @@ get 'home', to: 'students#home'
 post 'inform', to: "students#inform"
 get 'view', to: 'students#view'
 
+resources :teachers, only: [:new, :create, :show, :index, :edit, :update, :destroy]
+#root 'application#kika'
+#get 'teacher', to: 'teachers#show'
 
-root 'application#kika'
+#get 'teacher', action: :show, controller: 'teachers'
+#root 'application#keka'
+
+resources :users, only: [:new, :create, :show, :index, :edit, :update, :destroy]
+resources :articles, only: [:new, :create, :show, :index, :edit, :update, :destroy]
+
 end

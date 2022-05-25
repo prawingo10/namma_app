@@ -1,0 +1,20 @@
+<h1>edit users</h1>
+
+<% if @user.errors.any?%>
+<%@user.errors.full_messages.each do |msg|%>
+  <li><ol><%= msg %></ol></li> 
+  <% end %>
+  <% end %>
+
+
+<%= form_with(model: @user, local: true) do |u| %>
+
+   <%= u.label :UserName%><br>
+   <%= u.text_field :username%><br>
+
+   <%= u.label :EMail%><br>
+   <%= u.text_area :email%><br>
+
+   <%= u.submit :submit%>
+
+<% end %>

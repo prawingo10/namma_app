@@ -14,7 +14,7 @@
         <td><%=stud.name%></td>
         <td><%=stud.subject%></td>
         <td><%=stud.age%></td>
-        <td><%=link_to 'DELETE', student_path(stud), method: :delete%></td>
+        <td><%=link_to 'DELETE', student_path(id: stud.id), method: :delete%></td>
         <td><%=link_to 'SHOW', student_path(stud)%></td>
         <td><%=link_to 'EDIT', edit_student_path(stud)%></td>
 

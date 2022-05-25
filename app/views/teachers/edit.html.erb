@@ -1,0 +1,18 @@
+
+<h1>Edit Article</h1>
+<%@teacher.errors.any?%>
+<%if @teacher.errors.full_messages.each do |msg| %>
+<li><ol><%= msg %></ol></li>
+<% end %>
+<% end %>
+<%= form_with(model: @teacher, local: true) do |f| %>
+
+<%= f.label :Name %>
+<%= f.text_field :name%><br>
+
+<%= f.label :Subject %>
+<%= f.text_field :subject%><br>
+
+<%= f.submit %>
+
+<% end %>

@@ -1,21 +1,17 @@
-<%if @teachers.errors.any?%>
-<% @teachers.errors.full_messages.each do |msg| %>
-      <li><ol> <%= msg %></ol><li>
+
+<%@teachers.errors.any?%>
+<%if @teachers.errors.full_messages.each do |msg| %>
+<li><ol><%= msg %></ol></li>
 <% end %>
 <% end %>
+<%= form_with scope: :teacher, url:teachers_path, local: true do |f| %>
 
+<%= f.label :Name %>
+<%= f.text_field :name%><br>
 
-<h1>Form Page</h1>
+<%= f.label :Subject %>
+<%= f.text_field :subject%><br>
 
-<%= form_with scope: :teacher, url: teachers_path, local: true do |t| %>
-
-<%= t.label :Name%><br>
-<%= t.text_field :name%><br>
-
-<%= t.label :Subject%><br>
-<%= t.text_field :subject%><br>
-
-<%= t.submit 'Save' %>
+<%= f.submit %>
 
 <% end %>
-

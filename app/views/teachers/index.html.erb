@@ -1,23 +1,29 @@
-
-<h1>Teacher List</h1>
-
+<h1>List of Teacher here</h1>
 <table>
 <thead>
-<tr><th>Name :</th>
-<th>Subject :</th>
-</tr>
-
-
-<tbody>
-<% @teachers.each do |teach| %>
 <tr>
-<td><%= teach.name%></td>
-<td><%= teach.subject%></td>
+<th>Name:</th>
+<th>Subject:</th>
+<th>Action:</th>
 
 </tr>
-</tbody><% end %>
+</thead>
+
+<tbody><%@teachers.each do |teach| %>
+<tr>
+<td><%= teach.name %>
+</td>
+<td><%= teach.subject %>
+</td>
+<td> <%= link_to "Delete", '#' %>
+</td>
+</tr>
+
+</tbody>
+<% end %>
 
 </table>
+
 
 
 
